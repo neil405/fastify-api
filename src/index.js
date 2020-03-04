@@ -13,7 +13,9 @@ const swagger = require('./config/swagger');
 mongoose.Promise = global.Promise;
 mongoose.set('debug', true);
 
-mongoose.connect('mongodb://admin:admin123@customer-shard-00-00-xxcne.mongodb.net:27017,customer-shard-00-01-xxcne.mongodb.net:27017,customer-shard-00-02-xxcne.mongodb.net:27017/test?ssl=true&replicaSet=Customer-shard-0&authSource=admin&retryWrites=true&w=majority')
+const uri = "mongodb://root:hackerman@localhost:27017/admin";
+
+const conn = mongoose.connect(uri,  { useNewUrlParser: true, useUnifiedTopology: true })
     .then(() => console.log('MongoDB connected…'))
     .catch(err => console.log(err));
 
