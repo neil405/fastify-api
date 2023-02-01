@@ -18,7 +18,7 @@
     "fs": "0.0.1-security",
     "line-input-stream": "^1.0.1",
     "mongodb": "^3.5.4",
-    "mongoose": "^5.9.3",
+    "mongoose": "^5.13.15",
     "nodemon": "^2.0.2",
     "stream-to-iterator": "^3.0.3"
   }
